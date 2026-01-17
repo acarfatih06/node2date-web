@@ -18,6 +18,11 @@ export const metadata: Metadata = {
   description: "The first real-time dating app powered by AI translation. Build meaningful connections globally, without saying a word. Join our early access waitlist.",
   keywords: ["dating app", "AI translation", "international dating", "language barrier", "real-time translation"],
   authors: [{ name: "Fatih Acar" }],
+  icons: {
+    icon: '/icon.svg',
+    shortcut: '/icon.svg',
+    apple: '/icon.svg',
+  },
   openGraph: {
     title: "Node2Date - Breaking Language Barriers in Dating",
     description: "The first real-time dating app powered by AI translation.",
