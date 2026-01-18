@@ -87,7 +87,7 @@ const faqData = [
   },
   {
     question: "Are you open to partnerships?",
-    answer: "Yes. For investment or strategic partnership inquiries, please reach out to us at founder@node2date.com"
+    answer: "Yes. For investment or strategic partnership inquiries, please reach out to us at hell@node2date.com"
   }
 ];
 
