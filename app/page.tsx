@@ -4,17 +4,9 @@ import ClientWrapper from './components/ClientWrapper';
 import FooterWrapper from './components/FooterWrapper';
 
 // Lazy-load below-fold components for better initial bundle size
-const TechShowcase = dynamic(() => import('./components/TechShowcase'), {
-  ssr: false,
-});
-
-const FAQSection = dynamic(() => import('./components/FAQSection'), {
-  ssr: false,
-});
-
-const FoundersNote = dynamic(() => import('./components/FoundersNote'), {
-  ssr: false,
-});
+const TechShowcase = dynamic(() => import('./components/TechShowcase'));
+const FAQSection = dynamic(() => import('./components/FAQSection'));
+const FoundersNote = dynamic(() => import('./components/FoundersNote'));
 
 export default function Home() {
   return (

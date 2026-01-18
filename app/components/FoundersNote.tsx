@@ -39,7 +39,7 @@ export default function FoundersNote() {
                 className="relative h-24 w-24 overflow-hidden rounded-full shadow-lg ring-4 ring-violet-500/25"
               >
                 <Image
-                  src="/fatih2.jpg"
+                  src="/fatih2.webp"
                   alt="Fatih Açar"
                   width={120}
                   height={120}
