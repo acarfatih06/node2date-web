@@ -1,7 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { Resend } from 'resend';
+
+// Initialize Resend
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 // Email validation regex
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+// Your notification email address
+const NOTIFICATION_EMAIL = 'hello@node2date.com';
 
 export async function POST(request: NextRequest) {
   try {
@@ -27,12 +34,40 @@ export async function POST(request: NextRequest) {
     // Sanitize email
     const sanitizedEmail = email.trim().toLowerCase();
 
-    // TODO: Save to database (e.g., Prisma, MongoDB, etc.)
-    // For now, just log it
-    console.log('Waitlist signup:', sanitizedEmail);
+    // Send notification email to hello@node2date.com
+    try {
+      await resend.emails.send({
+        from: 'Node2Date Waitlist <onboarding@resend.dev>', // Resend will use your verified domain later
+        to: NOTIFICATION_EMAIL,
+        subject: `🎉 New Waitlist Signup: ${sanitizedEmail}`,
+        html: `
+          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+            <h2 style="color: #7c3aed;">New Waitlist Signup</h2>
+            <p style="font-size: 16px; color: #333;">
+              Someone just joined the Node2Date waitlist!
+            </p>
+            <div style="background: #f5f5f5; padding: 15px; border-radius: 8px; margin: 20px 0;">
+              <p style="margin: 0; font-weight: bold; color: #7c3aed;">Email Address:</p>
+              <p style="margin: 5px 0 0 0; font-size: 18px; color: #333;">${sanitizedEmail}</p>
+            </div>
+            <p style="font-size: 14px; color: #666;">
+              Timestamp: ${new Date().toLocaleString('en-US', { 
+                timeZone: 'UTC',
+                dateStyle: 'full',
+                timeStyle: 'long'
+              })}
+            </p>
+          </div>
+        `,
+      });
+    } catch (emailError) {
+      // Log email error but don't fail the request
+      console.error('Failed to send notification email:', emailError);
+      // Continue with success response even if email fails
+    }
 
-    // Simulate database save delay
-    await new Promise(resolve => setTimeout(resolve, 500));
+    // Log for debugging
+    console.log('Waitlist signup:', sanitizedEmail);
 
     // Return success response
     return NextResponse.json(
