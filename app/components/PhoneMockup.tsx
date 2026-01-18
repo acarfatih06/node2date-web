@@ -26,13 +26,13 @@ function PhoneMockup() {
       initial="hidden"
       animate="visible"
       variants={fadeInScale}
-      className="relative w-full flex justify-center"
+      className="relative w-full flex justify-center flex-shrink-0"
     >
       {/* iPhone 15 Pro Mockup Frame */}
       <motion.div
         whileHover={{ scale: 1.02 }}
         transition={{ duration: 0.3 }}
-        className="relative w-full max-w-[280px] aspect-[9/19.5] bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-[3rem] p-2 shadow-2xl cursor-pointer"
+        className="relative w-full max-w-[280px] aspect-[9/19.5] bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-[3rem] p-2 shadow-2xl cursor-pointer flex-shrink-0"
         onClick={nextImage}
       >
         {/* Notch */}
@@ -48,15 +48,16 @@ function PhoneMockup() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.5, ease: "easeInOut" }}
-              className="relative w-full h-full"
+              className="absolute inset-0 w-full h-full"
             >
               <Image
                 src={MOCKUP_IMAGES[currentIndex]}
                 alt={`App screenshot ${currentIndex + 1}`}
                 fill
-                className="object-cover blur-[2px] scale-105"
+                className="object-cover blur-[2px]"
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 priority={currentIndex === 0}
-                sizes="280px"
+                sizes="(max-width: 768px) 100vw, 280px"
               />
               
               {/* Gradient Overlay */}

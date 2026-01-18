@@ -46,7 +46,7 @@ export default function HeroSection({ onSubmit, isSubmitting }: HeroSectionProps
         </div>
       </div>
 
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-7xl w-full">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
           {/* Left Side - Content */}
           <div className="order-2 lg:order-1">
@@ -148,7 +148,7 @@ export default function HeroSection({ onSubmit, isSubmitting }: HeroSectionProps
             initial="hidden"
             animate="visible"
             variants={heroSequence}
-            className="relative order-1 lg:order-2"
+            className="relative order-1 lg:order-2 flex justify-center items-start flex-shrink-0"
           >
             <PhoneMockup />
           </motion.div>
