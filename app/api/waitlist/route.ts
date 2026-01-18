@@ -42,7 +42,7 @@ export async function POST(request: NextRequest) {
       }
 
       await resend.emails.send({
-        from: 'onboarding@resend.dev', // Resend sandbox mode - will use verified domain after setup
+        from: 'hello@node2date.com', // Resend sandbox mode - will use verified domain after setup
         to: NOTIFICATION_EMAIL,
         subject: `🎉 New Waitlist Signup: ${sanitizedEmail}`,
         html: `
