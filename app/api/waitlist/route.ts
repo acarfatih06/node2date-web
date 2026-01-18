@@ -36,8 +36,13 @@ export async function POST(request: NextRequest) {
 
     // Send notification email to hello@node2date.com
     try {
+      // Ensure API key is loaded
+      if (!process.env.RESEND_API_KEY) {
+        throw new Error('RESEND_API_KEY is not configured');
+      }
+
       await resend.emails.send({
-        from: 'Node2Date Waitlist <onboarding@resend.dev>', // Resend will use your verified domain later
+        from: 'onboarding@resend.dev', // Resend sandbox mode - will use verified domain after setup
         to: NOTIFICATION_EMAIL,
         subject: `🎉 New Waitlist Signup: ${sanitizedEmail}`,
         html: `
