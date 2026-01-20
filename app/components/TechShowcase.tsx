@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { Globe2, Shield, Smartphone } from 'lucide-react';
 import { fadeInUp, staggerContainer } from './animations';
-import { useTranslation } from 'react-i18next';
+import { useTranslation, Trans } from 'react-i18next';
 
 export default function TechShowcase() {
   const { t } = useTranslation();
@@ -71,7 +71,14 @@ export default function TechShowcase() {
                 {t('tech.card1.title')}
               </h3>
               <p className="leading-7 text-gray-600">
-                {t('tech.card1.body')}
+                <Trans
+                  i18nKey="tech.card1.body"
+                  components={{
+                    highlight: (
+                      <span className="font-semibold text-violet-700" />
+                    ),
+                  }}
+                />
               </p>
               
               <div className="mt-6 flex flex-wrap gap-2">
@@ -118,7 +125,14 @@ export default function TechShowcase() {
                 {t('tech.card2.title')}
               </h3>
               <p className="leading-7 text-gray-600">
-                {t('tech.card2.body')}
+                <Trans
+                  i18nKey="tech.card2.body"
+                  components={{
+                    highlight: (
+                      <span className="font-semibold text-violet-700" />
+                    ),
+                  }}
+                />
               </p>
               
               <div className="mt-6 flex flex-wrap gap-2">
@@ -165,7 +179,14 @@ export default function TechShowcase() {
                 {t('tech.card3.title')}
               </h3>
               <p className="leading-7 text-gray-600">
-                {t('tech.card3.body')}
+                <Trans
+                  i18nKey="tech.card3.body"
+                  components={{
+                    highlight: (
+                      <span className="font-semibold text-violet-700" />
+                    ),
+                  }}
+                />
               </p>
               
               <div className="mt-6 flex flex-wrap gap-2">

@@ -73,8 +73,7 @@ export default function HeroSection({ onSubmit, isSubmitting }: HeroSectionProps
               variants={heroSequence}
               className="mb-10 max-w-xl text-lg leading-8 text-gray-600"
             >
-              {t('hero.subheadline')}
-              {' '}
+              {t('hero.subheadline')}{' '}
               Powered by{' '}
               <span className="font-semibold text-violet-600">Node.js</span> &{' '}
               <span className="font-semibold text-violet-600">Google Cloud AI</span>.

@@ -5,7 +5,7 @@
       "accent": "Speak Naturally",
       "suffix": ""
     },
-    "subheadline": "Break the language barrier and discover the world. Chat in your native tongue, meet diverse cultures, and build meaningful global connections. Powered by Node.js & Enterprise-Grade Google Cloud AI.",
+    "subheadline": "Break the language barrier and discover the world. Chat in your native tongue, meet diverse cultures, and build meaningful global connections.",
     "emailPlaceholder": "Enter your email",
     "button": {
       "label": "Join the Global Community",
@@ -60,21 +60,21 @@
     "subtitle": "A robust foundation of cutting-edge technologies designed to deliver a seamless, secure, and lightning-fast global experience.",
     "card1": {
       "title": "Real-Time AI Translation",
-      "body": "Instantaneous message translation across 100+ languages using industry-leading Cloud APIs. Connect with the world, instantly.",
+      "body": "Instantaneous message translation across 100+ languages using industry-leading <highlight>Cloud APIs</highlight>. Connect with the world, instantly.",
       "tag1": "Google Cloud AI",
       "tag2": "NLP",
       "tag3": "100+ Languages"
     },
     "card2": {
       "title": "Cross-Platform Native",
-      "body": "Native-level performance with fluid 60FPS animations. Optimized for the modern global ecosystem using a unified React Native codebase.",
+      "body": "Native-level performance with fluid <highlight>60FPS animations</highlight>. Optimized for the modern global ecosystem using a unified React Native codebase.",
       "tag1": "React Native",
       "tag2": "60FPS",
       "tag3": "Native Feel"
     },
     "card3": {
       "title": "Enterprise-Grade Security",
-      "body": "Robust security featuring OTP authentication and end-to-end privacy protocols. Your global data integrity is our top priority.",
+      "body": "Robust security featuring <highlight>OTP authentication</highlight> and <highlight>end-to-end privacy</highlight> protocols. Your global data integrity is our top priority.",
       "tag1": "OTP Auth",
       "tag2": "E2E Privacy",
       "tag3": "Zero-Knowledge"
@@ -82,10 +82,13 @@
   },
   "founder": {
     "badge": "Founder's Vision",
-    "quote": "We are architecting a future of borderless communication. A world where language is no longer a barrier to finding meaningful global connections.",
+    "quote": "I am architecting a future of borderless communication. A world where language is no longer a barrier to finding meaningful global connections.",
     "name": "Fatih Acar",
     "title": "Founder & CEO, Node2Date",
     "status": "Currently in Early Access Development Phase."
+  },
+  "phone": {
+    "comingSoon": "Coming Soon"
   },
   "validation": {
     "emailRequired": "Please enter your email address.",

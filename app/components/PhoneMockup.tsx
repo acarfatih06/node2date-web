@@ -4,6 +4,7 @@ import { useState, memo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { fadeInScale } from './animations';
+import { useTranslation } from 'react-i18next';
 
 const MOCKUP_IMAGES = [
   '/1.webp',
@@ -16,6 +17,7 @@ const MOCKUP_IMAGES = [
 
 function PhoneMockup() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const { t } = useTranslation();
 
   const nextImage = () => {
     setCurrentIndex((prev) => (prev + 1) % MOCKUP_IMAGES.length);
@@ -72,7 +74,7 @@ function PhoneMockup() {
                   className="px-6 py-3 rounded-full bg-white/25 backdrop-blur-lg border-2 border-white/50 shadow-2xl"
                 >
                   <span className="text-white font-bold text-base tracking-wide drop-shadow-lg" style={{ textShadow: '0 2px 8px rgba(0, 0, 0, 0.5)' }}>
-                    Coming Soon
+                    {t('phone.comingSoon', { defaultValue: 'Coming Soon' })}
                   </span>
                 </motion.div>
               </div>

@@ -5,7 +5,7 @@
       "accent": "Kendi Dilinde",
       "suffix": "Konuş"
     },
-    "subheadline": "Dil engelini aşın ve dünyayı keşfedin. Kendi dilinizde doğal bir şekilde sohbet edin, farklı kültürlerle tanışın ve anlamlı küresel bağlar kurun. Node.js ve Google Cloud AI ile güçlendirildi.",
+    "subheadline": "Dil engelini aşın ve dünyayı keşfedin. Kendi dilinizde doğal bir şekilde sohbet edin, farklı kültürlerle tanışın ve anlamlı küresel bağlar kurun.",
     "emailPlaceholder": "E-posta adresinizi girin",
     "button": {
       "label": "Küresel Topluluğa Katıl",
@@ -61,21 +61,21 @@
     "subtitle": "Kesintisiz, güvenli ve ışık hızında bir küresel deneyim sunmak için tasarlanmış en ileri teknolojilere dayanan sağlam bir temel.",
     "card1": {
       "title": "Gerçek Zamanlı AI Çeviri",
-      "body": "Sektör lideri Bulut API'leri ile 100'den fazla dilde anlık mesaj çevirisi. Dünyayla anında ve küresel olarak bağlanın.",
+      "body": "Sektör lideri <highlight>Bulut API'leri</highlight> ile 100'den fazla dilde anlık mesaj çevirisi. Dünyayla anında ve küresel olarak bağlanın.",
       "tag1": "Google Cloud AI",
       "tag2": "NLP",
       "tag3": "100+ Dil"
     },
     "card2": {
       "title": "Yerel Performans (Native)",
-      "body": "Akıcı 60FPS animasyonlarla native seviyesinde performans. Modern küresel ekosistem için tek bir güçlü React Native kod tabanıyla optimize edildi.",
+      "body": "Akıcı <highlight>60FPS animasyonlarla</highlight> native seviyesinde performans. Modern küresel ekosistem için tek bir güçlü React Native kod tabanıyla optimize edildi.",
       "tag1": "React Native",
       "tag2": "60FPS",
       "tag3": "Native Hissiyat"
     },
     "card3": {
       "title": "Kurumsal Düzeyde Güvenlik",
-      "body": "OTP doğrulaması ve uçtan uca gizlilik protokollerine sahip sağlam güvenlik. Küresel veri bütünlüğünüz bizim en büyük önceliğimizdir.",
+      "body": "<highlight>OTP doğrulaması</highlight> ve <highlight>uçtan uca gizlilik</highlight> protokollerine sahip sağlam güvenlik. Küresel veri bütünlüğünüz bizim en büyük önceliğimizdir.",
       "tag1": "OTP Doğrulama",
       "tag2": "E2E Gizlilik",
       "tag3": "Sıfır Bilgi"
@@ -83,10 +83,13 @@
   },
   "founder": {
     "badge": "Kurucunun Vizyonu",
-    "quote": "Sınırları olmayan bir iletişim geleceği inşa ediyoruz. Dilin artık anlamlı ve küresel bağlar kurmanın önünde bir engel olmadığı bir dünya.",
+    "quote": "Sınırları olmayan bir iletişim geleceği inşa ediyorum. Dilin artık anlamlı ve küresel bağlar kurmanın önünde bir engel olmadığı bir dünya.",
     "name": "Fatih Acar",
     "title": "Kurucu & CEO, Node2Date",
     "status": "Şu anda Erken Erişim Geliştirme Aşamasında."
+  },
+  "phone": {
+    "comingSoon": "Çok Yakında"
   },
   "validation": {
     "emailRequired": "Lütfen e-posta adresinizi girin.",

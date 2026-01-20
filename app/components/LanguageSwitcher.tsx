@@ -1,6 +1,7 @@
 'use client';
 
 import { useTranslation } from 'react-i18next';
+import { useEffect, useState } from 'react';
 
 function TurkeyFlagIcon({ className }: { className?: string }) {
   return (
@@ -63,6 +64,20 @@ function USFlagIcon({ className }: { className?: string }) {
 
 export default function LanguageSwitcher() {
   const { i18n } = useTranslation();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Avoid hydration mismatch: on the server we can't read localStorage/navigator language.
+  // Render a stable placeholder first, then switch to the real language after mount.
+  if (!mounted) {
+    return (
+      <span className="inline-flex h-7 w-[64px] rounded-full border border-violet-200/60 bg-white/70 shadow-sm" />
+    );
+  }
+
   const current = i18n.language?.startsWith('tr') ? 'tr' : 'en';
 
   const toggleLang = () => {
