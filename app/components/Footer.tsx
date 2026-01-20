@@ -3,12 +3,15 @@
 import { motion } from 'framer-motion';
 import { Linkedin, Instagram, X } from 'lucide-react';
 import { fadeInUp } from './animations';
+import { useTranslation } from 'react-i18next';
 
 interface FooterProps {
   onSocialClick: (e: React.MouseEvent, platform: string) => void;
 }
 
 export default function Footer({ onSocialClick }: FooterProps) {
+  const { t } = useTranslation();
+
   return (
     <motion.footer
       initial="hidden"
@@ -24,7 +27,7 @@ export default function Footer({ onSocialClick }: FooterProps) {
               <span className="text-sm font-bold text-white">N2D</span>
             </div>
             <span className="text-sm text-gray-600">
-              © 2026 Node2Date Inc.
+              {t('footer.copyright')}
             </span>
           </div>
 
@@ -34,14 +37,14 @@ export default function Footer({ onSocialClick }: FooterProps) {
               href="#"
               className="text-gray-600 transition-colors"
             >
-              Privacy Policy
+              {t('footer.privacy')}
             </motion.a>
             <motion.a
               whileHover={{ scale: 1.05, color: "#8b5cf6" }}
               href="mailto:support@node2date.com"
               className="text-gray-600 transition-colors"
             >
-              Contact
+              {t('footer.contact')}
             </motion.a>
           </div>
 

@@ -1,0 +1,94 @@
+{
+  "hero": {
+    "headline": {
+      "prefix": "Connect Globally,",
+      "accent": "Speak Naturally",
+      "suffix": ""
+    },
+    "subheadline": "Break the language barrier and discover the world. Chat in your native tongue, meet diverse cultures, and build meaningful global connections. Powered by Node.js & Enterprise-Grade Google Cloud AI.",
+    "emailPlaceholder": "Enter your email",
+    "button": {
+      "label": "Join the Global Community",
+      "loading": "Connecting you..."
+    },
+    "betaLabel": "Beta launching soon on",
+    "note": "Be the first to experience a world without borders. Zero spam. Pure connection."
+  },
+  "toast": {
+    "success": {
+      "title": "You're on the Early Access List!",
+      "description": "We've received your request with {{email}}. Stay tuned here for updates about early access and launch announcements."
+    },
+    "error": {
+      "title": "Registration Failed",
+      "description": "We couldn't add you to the list. Please check your connection and try again."
+    }
+  },
+  "header": {
+    "comingSoon": "Global Launch Phase",
+    "progress": "65% Completed",
+    "contactSupport": "Support"
+  },
+  "footer": {
+    "privacy": "Privacy Policy",
+    "contact": "Contact Us",
+    "copyright": "© 2026 Node2Date Inc."
+  },
+  "faq": {
+    "titlePrefix": "Everything You",
+    "titleAccent": "Need to Know",
+    "q1": "What makes Node2Date unique?",
+    "a1": "It is the world's first social platform to integrate real-time AI translation, allowing you to meet, chat, and learn from anyone globally without any linguistic friction.",
+    "q2": "How accurate is the translation?",
+    "a2": "We leverage advanced Neural Machine Translation (NMT) via Google Cloud AI to ensure context-aware, human-like, and culturally sensitive conversations.",
+    "q3": "Is there any latency in the chat?",
+    "a3": "No. Our Node.js-driven backend architecture is optimized for millisecond-fast processing, delivering a seamless real-time communication experience.",
+    "q4": "Is my data secure?",
+    "a4": "Absolutely. All communications are end-to-end encrypted and processed through secure, automated APIs with a strict zero-knowledge policy.",
+    "q5": "How do you handle fake profiles?",
+    "a5": "We enforce mandatory OTP (One-Time Password) verification and AI-assisted biometric validation to ensure every connection is authentic.",
+    "q6": "Why should I join the waitlist?",
+    "a6": "Waitlist members receive priority beta invites, an exclusive 'Global Pioneer' digital badge, and 3 months of complimentary Premium access.",
+    "q7": "Which platforms are supported?",
+    "a7": "Node2Date will launch simultaneously on iOS and Android, built on a high-performance React Native architecture for a native-feel experience.",
+    "q8": "Are you open to strategic partnerships?",
+    "a8": "Yes. For investment opportunities or strategic partnership inquiries, please contact our executive team at hello@node2date.com."
+  },
+  "tech": {
+    "titlePrefix": "Built with",
+    "titleAccent": "Next-Gen Infrastructure",
+    "subtitle": "A robust foundation of cutting-edge technologies designed to deliver a seamless, secure, and lightning-fast global experience.",
+    "card1": {
+      "title": "Real-Time AI Translation",
+      "body": "Instantaneous message translation across 100+ languages using industry-leading Cloud APIs. Connect with the world, instantly.",
+      "tag1": "Google Cloud AI",
+      "tag2": "NLP",
+      "tag3": "100+ Languages"
+    },
+    "card2": {
+      "title": "Cross-Platform Native",
+      "body": "Native-level performance with fluid 60FPS animations. Optimized for the modern global ecosystem using a unified React Native codebase.",
+      "tag1": "React Native",
+      "tag2": "60FPS",
+      "tag3": "Native Feel"
+    },
+    "card3": {
+      "title": "Enterprise-Grade Security",
+      "body": "Robust security featuring OTP authentication and end-to-end privacy protocols. Your global data integrity is our top priority.",
+      "tag1": "OTP Auth",
+      "tag2": "E2E Privacy",
+      "tag3": "Zero-Knowledge"
+    }
+  },
+  "founder": {
+    "badge": "Founder's Vision",
+    "quote": "We are architecting a future of borderless communication. A world where language is no longer a barrier to finding meaningful global connections.",
+    "name": "Fatih Acar",
+    "title": "Founder & CEO, Node2Date",
+    "status": "Currently in Early Access Development Phase."
+  },
+  "validation": {
+    "emailRequired": "Please enter your email address.",
+    "emailInvalid": "Please enter a valid email address. It must contain '@' and a domain, for example: name@example.com."
+  }
+}

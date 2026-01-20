@@ -3,8 +3,11 @@
 import { motion } from 'framer-motion';
 import { Globe2, Shield, Smartphone } from 'lucide-react';
 import { fadeInUp, staggerContainer } from './animations';
+import { useTranslation } from 'react-i18next';
 
 export default function TechShowcase() {
+  const { t } = useTranslation();
+
   return (
     <section className="px-6 py-24 lg:px-8 relative min-h-screen flex items-center" style={{ backgroundColor: 'rgba(139, 92, 246, 0.08)' }}>
       {/* Decorative Elements */}
@@ -21,14 +24,13 @@ export default function TechShowcase() {
           className="mb-16 text-center"
         >
           <h2 className="mb-4 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-            Powered by{' '}
+            {t('tech.titlePrefix')}{' '}
             <span className="bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent">
-              Next-Gen Tech
+              {t('tech.titleAccent')}
             </span>
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-gray-600">
-            Built on a foundation of cutting-edge technology to deliver seamless, 
-            secure, and lightning-fast experiences.
+            {t('tech.subtitle')}
           </p>
         </motion.div>
 
@@ -65,22 +67,22 @@ export default function TechShowcase() {
                 <Globe2 className="h-7 w-7 text-white" />
               </motion.div>
               
-              <h3 className="mb-3 text-2xl font-bold text-gray-900">Real-Time Translation</h3>
+              <h3 className="mb-3 text-2xl font-bold text-gray-900">
+                {t('tech.card1.title')}
+              </h3>
               <p className="leading-7 text-gray-600">
-                Instant message translation using advanced{' '}
-                <span className="font-semibold text-violet-600">Cloud APIs</span>. 
-                Connect with anyone, anywhere, in real-time across 100+ languages.
+                {t('tech.card1.body')}
               </p>
               
               <div className="mt-6 flex flex-wrap gap-2">
                 <span className="rounded-full bg-violet-100 px-3 py-1 text-xs font-medium text-violet-700">
-                  Google Cloud AI
+                  {t('tech.card1.tag1')}
                 </span>
                 <span className="rounded-full bg-violet-100 px-3 py-1 text-xs font-medium text-violet-700">
-                  NLP
+                  {t('tech.card1.tag2')}
                 </span>
                 <span className="rounded-full bg-violet-100 px-3 py-1 text-xs font-medium text-violet-700">
-                  100+ Languages
+                  {t('tech.card1.tag3')}
                 </span>
               </div>
             </div>
@@ -112,22 +114,22 @@ export default function TechShowcase() {
                 <Smartphone className="h-7 w-7 text-white" />
               </motion.div>
               
-              <h3 className="mb-3 text-2xl font-bold text-gray-900">Built with React Native</h3>
+              <h3 className="mb-3 text-2xl font-bold text-gray-900">
+                {t('tech.card2.title')}
+              </h3>
               <p className="leading-7 text-gray-600">
-                Native performance with smooth{' '}
-                <span className="font-semibold text-indigo-600">60FPS animations</span>. 
-                Optimized for both iOS and Android with a single, powerful codebase.
+                {t('tech.card2.body')}
               </p>
               
               <div className="mt-6 flex flex-wrap gap-2">
                 <span className="rounded-full bg-indigo-100 px-3 py-1 text-xs font-medium text-indigo-700">
-                  React Native
+                  {t('tech.card2.tag1')}
                 </span>
                 <span className="rounded-full bg-indigo-100 px-3 py-1 text-xs font-medium text-indigo-700">
-                  60FPS
+                  {t('tech.card2.tag2')}
                 </span>
                 <span className="rounded-full bg-indigo-100 px-3 py-1 text-xs font-medium text-indigo-700">
-                  Cross-Platform
+                  {t('tech.card2.tag3')}
                 </span>
               </div>
             </div>
@@ -159,23 +161,22 @@ export default function TechShowcase() {
                 <Shield className="h-7 w-7 text-white" />
               </motion.div>
               
-              <h3 className="mb-3 text-2xl font-bold text-gray-900">Secure & Private</h3>
+              <h3 className="mb-3 text-2xl font-bold text-gray-900">
+                {t('tech.card3.title')}
+              </h3>
               <p className="leading-7 text-gray-600">
-                Enterprise-grade security with{' '}
-                <span className="font-semibold text-purple-600">OTP verification</span> and{' '}
-                <span className="font-semibold text-purple-600">end-to-end privacy</span>. 
-                Your data is protected at every step.
+                {t('tech.card3.body')}
               </p>
               
               <div className="mt-6 flex flex-wrap gap-2">
                 <span className="rounded-full bg-purple-100 px-3 py-1 text-xs font-medium text-purple-700">
-                  OTP Auth
+                  {t('tech.card3.tag1')}
                 </span>
                 <span className="rounded-full bg-purple-100 px-3 py-1 text-xs font-medium text-purple-700">
-                  E2E Privacy
+                  {t('tech.card3.tag2')}
                 </span>
                 <span className="rounded-full bg-purple-100 px-3 py-1 text-xs font-medium text-purple-700">
-                  Secure
+                  {t('tech.card3.tag3')}
                 </span>
               </div>
             </div>

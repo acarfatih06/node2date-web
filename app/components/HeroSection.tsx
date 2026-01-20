@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { Send, Apple, Chrome } from 'lucide-react';
 import { heroSequence } from './animations';
 import PhoneMockup from './PhoneMockup';
+import { useTranslation } from 'react-i18next';
 
 interface HeroSectionProps {
   onSubmit: (email: string) => Promise<void>;
@@ -13,6 +14,7 @@ interface HeroSectionProps {
 
 export default function HeroSection({ onSubmit, isSubmitting }: HeroSectionProps) {
   const [email, setEmail] = useState('');
+  const { t } = useTranslation();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -57,11 +59,11 @@ export default function HeroSection({ onSubmit, isSubmitting }: HeroSectionProps
               variants={heroSequence}
               className="mb-6 text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:text-7xl"
             >
-              Breaking{' '}
+              {t('hero.headline.prefix')}{' '}
               <span className="bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent">
-                Language Barriers
+                {t('hero.headline.accent')}
               </span>
-              {' '}in Dating
+              {' '}{t('hero.headline.suffix')}
             </motion.h1>
 
             <motion.p
@@ -71,8 +73,9 @@ export default function HeroSection({ onSubmit, isSubmitting }: HeroSectionProps
               variants={heroSequence}
               className="mb-10 max-w-xl text-lg leading-8 text-gray-600"
             >
-              Experience seamless, real-time translated dating. Chat in your native language, 
-              connect globally. Powered by{' '}
+              {t('hero.subheadline')}
+              {' '}
+              Powered by{' '}
               <span className="font-semibold text-violet-600">Node.js</span> &{' '}
               <span className="font-semibold text-violet-600">Google Cloud AI</span>.
             </motion.p>
@@ -84,6 +87,7 @@ export default function HeroSection({ onSubmit, isSubmitting }: HeroSectionProps
               animate="visible"
               variants={heroSequence}
               onSubmit={handleSubmit}
+              noValidate
               className="max-w-md"
             >
               <div className="flex flex-col gap-3 sm:flex-row">
@@ -91,7 +95,7 @@ export default function HeroSection({ onSubmit, isSubmitting }: HeroSectionProps
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Enter your email"
+                  placeholder={t('hero.emailPlaceholder')}
                   required
                   className="flex-1 rounded-full border border-violet-200/50 bg-white/80 px-6 py-4 text-gray-900 placeholder-gray-400 shadow-sm backdrop-blur-sm transition-all focus:border-violet-500 focus:outline-none focus:ring-2 focus:ring-violet-500/20"
                 />
@@ -114,10 +118,10 @@ export default function HeroSection({ onSubmit, isSubmitting }: HeroSectionProps
                   className="group flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-violet-600 to-purple-600 px-8 py-4 font-semibold text-white shadow-lg transition-all hover:from-violet-500 hover:to-purple-500 hover:shadow-2xl hover:shadow-violet-500/50 disabled:opacity-50 sm:w-auto"
                 >
                   {isSubmitting ? (
-                    'Joining...'
+                    t('hero.button.loading')
                   ) : (
                     <>
-                      Join Waitlist
+                      {t('hero.button.label')}
                       <Send className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </>
                   )}
@@ -125,7 +129,7 @@ export default function HeroSection({ onSubmit, isSubmitting }: HeroSectionProps
               </div>
               
               <div className="mt-4 flex items-center gap-3 text-sm">
-                <span className="text-gray-500">Beta launching soon on</span>
+                <span className="text-gray-500">{t('hero.betaLabel')}</span>
                 <div className="flex items-center gap-2">
                   <div className="flex h-7 w-7 items-center justify-center rounded-lg border border-violet-200/50 bg-white/80 shadow-sm">
                     <Apple className="h-4 w-4 text-gray-600" />
@@ -137,7 +141,7 @@ export default function HeroSection({ onSubmit, isSubmitting }: HeroSectionProps
               </div>
 
               <p className="mt-3 text-xs text-gray-500">
-                Be the first to experience borderless dating. No spam, ever.
+                {t('hero.note')}
               </p>
             </motion.form>
           </div>

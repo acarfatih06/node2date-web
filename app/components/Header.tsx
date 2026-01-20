@@ -1,9 +1,39 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from './LanguageSwitcher';
+
+const TARGET_PROGRESS = 65;
+const STEP_MS = 70; // her yüzde için sabit süre (~4.5s toplam)
 
 export default function Header() {
+  const { t, i18n } = useTranslation();
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    setProgress(0);
+
+    const id = window.setInterval(() => {
+      setProgress((prev) => {
+        if (prev >= TARGET_PROGRESS) {
+          window.clearInterval(id);
+          return TARGET_PROGRESS;
+        }
+        return prev + 1;
+      });
+    }, STEP_MS);
+
+    return () => {
+      window.clearInterval(id);
+    };
+  }, []);
+
+  const isTR = i18n.language?.startsWith('tr');
+  const progressLabel = isTR ? `%${progress}` : `${progress}%`;
+
   return (
     <motion.header 
       initial={{ y: -100, opacity: 0 }}
@@ -34,15 +64,20 @@ export default function Header() {
             className="flex-1 max-w-md hidden md:block"
           >
             <div className="flex items-center justify-between mb-1">
-              <span className="text-xs font-semibold text-violet-600">Coming Soon</span>
-              <span className="text-xs font-semibold text-violet-600">65%</span>
+              <span className="text-xs font-semibold text-violet-600">
+                {t('header.comingSoon')}
+              </span>
+              <span className="text-xs font-semibold text-violet-600 tabular-nums">
+                {progressLabel}
+              </span>
             </div>
             <div className="relative h-2 w-full overflow-hidden rounded-full bg-violet-100/50">
               <motion.div
-                initial={{ width: 0 }}
-                animate={{ width: '65%' }}
-                transition={{ duration: 1.2, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
                 className="absolute left-0 top-0 h-full rounded-full bg-gradient-to-r from-violet-600 to-purple-600 shadow-lg shadow-violet-500/30 overflow-hidden"
+                style={{
+                  width: `${progress}%`,
+                  transition: 'width 0.07s linear',
+                }}
               >
                 {/* Shimmer Effect */}
                 <motion.div
@@ -62,19 +97,22 @@ export default function Header() {
             </div>
           </motion.div>
           
-          {/* Contact Support */}
-          <motion.a
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            href="mailto:support@node2date.com"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="flex items-center gap-2 rounded-full border border-violet-200/50 bg-white/80 px-4 py-2 text-sm font-medium shadow-sm transition-all hover:border-violet-500 hover:bg-violet-50 hover:text-violet-600 flex-shrink-0"
-          >
-            <Mail className="h-4 w-4" />
-            <span className="hidden sm:inline">Contact Support</span>
-          </motion.a>
+          {/* Contact Support + Language Switcher */}
+          <div className="flex items-center gap-3">
+            <motion.a
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              href="mailto:support@node2date.com"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="flex items-center gap-2 rounded-full border border-violet-200/50 bg-white/80 px-4 py-2 text-sm font-medium shadow-sm transition-all hover:border-violet-500 hover:bg-violet-50 hover:text-violet-600 flex-shrink-0"
+            >
+              <Mail className="h-4 w-4" />
+              <span className="hidden sm:inline">{t('header.contactSupport')}</span>
+            </motion.a>
+            <LanguageSwitcher />
+          </div>
         </div>
       </nav>
     </motion.header>

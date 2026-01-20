@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Plus, Minus } from 'lucide-react';
 import { fadeInUp } from './animations';
+import { useTranslation } from 'react-i18next';
 
 interface FAQItemProps {
   question: string;
@@ -58,40 +59,42 @@ function FAQItem({ question, answer }: FAQItemProps) {
 
 const faqData = [
   {
-    question: "What makes Node2Date unique?",
-    answer: "It's the first dating app to integrate real-time AI translation, allowing you to match and chat globally without language barriers."
+    questionKey: "faq.q1",
+    answerKey: "faq.a1"
   },
   {
-    question: "How accurate is the translation?",
-    answer: "We use advanced Neural Machine Translation (NMT) via Google Cloud AI to ensure context-aware and human-like conversations."
+    questionKey: "faq.q2",
+    answerKey: "faq.a2"
   },
   {
-    question: "Is there any lag in the chat?",
-    answer: "No. Our Node.js backend infrastructure is optimized for millisecond-fast processing, ensuring a seamless real-time experience."
+    questionKey: "faq.q3",
+    answerKey: "faq.a3"
   },
   {
-    question: "Is my data secure?",
-    answer: "Yes. All communications are end-to-end encrypted and processed through secure, automated APIs with a zero-knowledge policy."
+    questionKey: "faq.q4",
+    answerKey: "faq.a4"
   },
   {
-    question: "How do you handle fake profiles?",
-    answer: "We enforce mandatory OTP (One-Time Password) verification and AI-assisted photo validation to ensure authentic connections."
+    questionKey: "faq.q5",
+    answerKey: "faq.a5"
   },
   {
-    question: "Why should I join the waitlist?",
-    answer: "Waitlist members receive priority beta access, a 'Founding Member' badge, and 3 months of free Premium features."
+    questionKey: "faq.q6",
+    answerKey: "faq.a6"
   },
   {
-    question: "Which devices are supported?",
-    answer: "Node2Date will launch simultaneously on iOS and Android, built on a high-performance React Native architecture."
+    questionKey: "faq.q7",
+    answerKey: "faq.a7"
   },
   {
-    question: "Are you open to partnerships?",
-    answer: "Yes. For investment or strategic partnership inquiries, please reach out to us at hello@node2date.com"
+    questionKey: "faq.q8",
+    answerKey: "faq.a8"
   }
 ];
 
 export default function FAQSection() {
+  const { t } = useTranslation();
+
   return (
     <section className="px-6 py-24 lg:px-8 relative overflow-hidden min-h-screen flex items-center">
       {/* Background Decoration */}
@@ -110,9 +113,9 @@ export default function FAQSection() {
           className="mb-8 text-center"
         >
           <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-            Frequently Asked{' '}
+            {t('faq.titlePrefix')}{' '}
             <span className="bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent">
-              Questions
+              {t('faq.titleAccent')}
             </span>
           </h2>
         </motion.div>
@@ -127,7 +130,11 @@ export default function FAQSection() {
         >
           <div className="space-y-0">
             {faqData.map((faq, index) => (
-              <FAQItem key={index} question={faq.question} answer={faq.answer} />
+              <FAQItem
+                key={index}
+                question={t(faq.questionKey)}
+                answer={t(faq.answerKey)}
+              />
             ))}
           </div>
         </motion.div>

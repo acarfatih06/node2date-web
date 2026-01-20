@@ -3,8 +3,11 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { fadeInScale } from './animations';
+import { useTranslation } from 'react-i18next';
 
 export default function FoundersNote() {
+  const { t } = useTranslation();
+
   return (
     <section className="px-6 py-24 lg:px-8 relative min-h-screen flex items-center" style={{ backgroundColor: 'rgba(139, 92, 246, 0.08)' }}>
       {/* Decorative Elements */}
@@ -26,11 +29,10 @@ export default function FoundersNote() {
         >
           <div>
             <h2 className="mb-2 text-sm font-semibold uppercase tracking-wider text-violet-600">
-              Founder's Note
+              {t('founder.badge')}
             </h2>
             <p className="mb-6 text-2xl font-medium leading-relaxed text-gray-800 sm:text-3xl">
-              "We are building the future of borderless dating. A world where language 
-              is no longer a barrier to finding meaningful connections."
+              "{t('founder.quote')}"
             </p>
             
             <div className="flex items-center gap-5 pt-4 border-t border-violet-200/50">
@@ -52,13 +54,13 @@ export default function FoundersNote() {
                 />
               </motion.div>
               <div>
-                <p className="text-xl font-bold text-gray-900">Fatih Acar</p>
-                <p className="text-sm text-gray-600">Founder & CEO, Node2Date</p>
+                <p className="text-xl font-bold text-gray-900">{t('founder.name')}</p>
+                <p className="text-sm text-gray-600">{t('founder.title')}</p>
               </div>
             </div>
             
             <p className="mt-6 text-sm text-gray-500 italic">
-              Currently in Early Access development phase.
+              {t('founder.status')}
             </p>
           </div>
         </motion.div>

@@ -1,0 +1,95 @@
+{
+  "hero": {
+    "headline": {
+      "prefix": "Dünyayla Bağlan,",
+      "accent": "Kendi Dilinde",
+      "suffix": "Konuş"
+    },
+    "subheadline": "Dil engelini aşın ve dünyayı keşfedin. Kendi dilinizde doğal bir şekilde sohbet edin, farklı kültürlerle tanışın ve anlamlı küresel bağlar kurun. Node.js ve Google Cloud AI ile güçlendirildi.",
+    "emailPlaceholder": "E-posta adresinizi girin",
+    "button": {
+      "label": "Küresel Topluluğa Katıl",
+      "loading": "Bağlanıyorsun..."
+    },
+    "betaLabel": "Beta yakında şu platformlarda:",
+    "note": "Sınırların olmadığı bir dünyayı ilk deneyimleyen siz olun. Sıfır spam. Sadece gerçek bağlar."
+  },
+  "toast": {
+    "success": {
+      "title": "Erken Erişim Listesine Eklendin!",
+      "description": "{{email}} adresiyle isteğini aldık. Erken erişim ve lansman duyuruları için buradan gelecek güncellemeleri takipte kal."
+    },
+    "error": {
+      "title": "Kayıt Başarısız",
+      "description": "Seni listeye ekleyemedik. Lütfen bağlantını kontrol edip tekrar dene."
+    }
+  },
+  "header": {
+    "comingSoon": "Küresel Lansman Aşaması",
+    "progress": "%65 Tamamlandı",
+    "contactSupport": "Destek"
+  },
+  "footer": {
+    "privacy": "Gizlilik Politikası",
+    "contact": "Bize Ulaşın",
+    "copyright": "© 2026 Node2Date Inc."
+  },
+  "faq": {
+    "titlePrefix": "Bilmen Gereken",
+    "titleAccent": "Her Şey",
+    "q1": "Node2Date'i benzersiz kılan nedir?",
+    "a1": "Gerçek zamanlı yapay zeka çevirisini entegre eden dünyanın ilk sosyal platformudur; dil engeli olmadan dünyanın her yerinden insanlarla tanışmana, sohbet etmene ve yeni kültürler öğrenmene olanak tanır.",
+    "q2": "Çeviri ne kadar doğru?",
+    "a2": "Bağlama duyarlı ve insan benzeri sohbetler sağlamak için Google Cloud AI üzerinden gelişmiş Sinirsel Makine Çevirisi (NMT) teknolojisini kullanıyoruz.",
+    "q3": "Sohbette gecikme olur mu?",
+    "a3": "Hayır. Node.js tabanlı backend mimarimiz milisaniye hızında işlem yapacak şekilde optimize edilmiştir; bu sayede kesintisiz bir gerçek zamanlı iletişim deneyimi sunar.",
+    "q4": "Verilerim güvende mi?",
+    "a4": "Kesinlikle. Tüm iletişimler uçtan uca şifrelenir ve katı bir 'zero-knowledge' (sıfır bilgi) politikasına sahip güvenli, otomatik API'ler üzerinden işlenir.",
+    "q5": "Sahte profillerle nasıl mücadele ediyorsunuz?",
+    "a5": "Her bağlantının gerçek olduğundan emin olmak için zorunlu OTP (Tek Kullanımlık Şifre) doğrulaması ve yapay zeka destekli biyometrik onay uyguluyoruz.",
+    "q6": "Neden bekleme listesine katılmalıyım?",
+    "a6": "Bekleme listesi üyeleri öncelikli beta erişimi, özel 'Küresel Öncü' dijital rozeti ve 3 aylık ücretsiz Premium özelliklere sahip olur.",
+    "q7": "Hangi platformlar desteklenecek?",
+    "a7": "Node2Date, yüksek performanslı React Native mimarisi ile hem iOS hem de Android'de aynı anda yayınlanacak ve yerel (native) uygulama hissi sunacak.",
+    "getInTouch": "İletişime Geç",
+    "q8": "Stratejik iş ortaklıklarına açık mısınız?",
+    "a8": "Evet. Yatırım fırsatları veya stratejik iş ortaklığı talepleri için lütfen yönetim ekibimizle hello@node2date.com adresinden iletişime geç."
+  },
+  "tech": {
+    "titlePrefix": "Güçlü",
+    "titleAccent": "Yeni Nesil Altyapı",
+    "subtitle": "Kesintisiz, güvenli ve ışık hızında bir küresel deneyim sunmak için tasarlanmış en ileri teknolojilere dayanan sağlam bir temel.",
+    "card1": {
+      "title": "Gerçek Zamanlı AI Çeviri",
+      "body": "Sektör lideri Bulut API'leri ile 100'den fazla dilde anlık mesaj çevirisi. Dünyayla anında ve küresel olarak bağlanın.",
+      "tag1": "Google Cloud AI",
+      "tag2": "NLP",
+      "tag3": "100+ Dil"
+    },
+    "card2": {
+      "title": "Yerel Performans (Native)",
+      "body": "Akıcı 60FPS animasyonlarla native seviyesinde performans. Modern küresel ekosistem için tek bir güçlü React Native kod tabanıyla optimize edildi.",
+      "tag1": "React Native",
+      "tag2": "60FPS",
+      "tag3": "Native Hissiyat"
+    },
+    "card3": {
+      "title": "Kurumsal Düzeyde Güvenlik",
+      "body": "OTP doğrulaması ve uçtan uca gizlilik protokollerine sahip sağlam güvenlik. Küresel veri bütünlüğünüz bizim en büyük önceliğimizdir.",
+      "tag1": "OTP Doğrulama",
+      "tag2": "E2E Gizlilik",
+      "tag3": "Sıfır Bilgi"
+    }
+  },
+  "founder": {
+    "badge": "Kurucunun Vizyonu",
+    "quote": "Sınırları olmayan bir iletişim geleceği inşa ediyoruz. Dilin artık anlamlı ve küresel bağlar kurmanın önünde bir engel olmadığı bir dünya.",
+    "name": "Fatih Acar",
+    "title": "Kurucu & CEO, Node2Date",
+    "status": "Şu anda Erken Erişim Geliştirme Aşamasında."
+  },
+  "validation": {
+    "emailRequired": "Lütfen e-posta adresinizi girin.",
+    "emailInvalid": "Lütfen geçerli bir e-posta adresi girin. \"@\" ve alan adı içermelidir (örnek: isim@example.com)."
+  }
+}
